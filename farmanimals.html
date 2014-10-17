@@ -29,15 +29,19 @@
     <p style="text-align:center;">Farm Animals</p>
     <!--Define HTML5 Audio Sources-->
     <audio id="pig" preload="auto">
+       <source src="Pig.ogg" type="audio/mpeg">
        <source src="Pig.mp3" type="audio/mpeg">
     </audio>
     <audio id="cow" preload="auto">
+       <source src="Cow.ogg" type="audio/mpeg">
        <source src="Cow.mp3" type="audio/mpeg">
     </audio>
     <audio id="sheep" preload="auto">
+       <source src="Sheep.ogg" type="audio/mpeg">
        <source src="Sheep.mp3" type="audio/mpeg">
     </audio>
     <audio id="horse"  preload="auto">
+       <source src="Horse.ogg" type="audio/mpeg">
        <source src="Horse.mp3" type="audio/mpeg">
     </audio>
     <!--End HTML5 Audio Sources -->
@@ -68,18 +72,37 @@
 	   noise = $('#pig');
 	   noise.get(0).play();
    });
+   $("#animal1").on("tap",function(){
+	   noise = $('#pig');
+	   noise.get(0).play();
+   });
+
    $('#animal2').click(function() 
    {
 	   noise = $('#cow');
 	   noise.get(0).play();
    });
+   $("#animal2").on("tap",function(){
+	   noise = $('#cow');
+	   noise.get(0).play();
+   });
+   
    $('#animal3').click(function() 
    {
 	   noise = $('#sheep');
 	   noise.get(0).play();
    });
+   $("#animal3").on("tap",function(){
+	   noise = $('#sheep');
+	   noise.get(0).play();
+   });
+   
    $('#animal4').click(function() 
    {
+	   noise = $('#horse');
+	   noise.get(0).play();
+   });
+   $("#animal4").on("tap",function(){
 	   noise = $('#horse');
 	   noise.get(0).play();
    });
