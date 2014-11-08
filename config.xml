@@ -1,2 +1,24 @@
-<feature name="http://api.phonegap.com/1.0/device"></feature> 
-<feature name="http://api.phonegap.com/1.0/media"></feature>
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.mandybrown.animals"
+        versionCode = "10" 
+        version     = "1.0.0" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Animal Sounds by Mandy Brown</name>
+
+    <description>
+        Enjoy Animal Sounds with your children 
+    </description>
+
+    <author>Mandy Brown</author>
+	
+	<gap:platform name="ios" />
+    <gap:platform name="android" />
+    <gap:platform name="winphone" />
+    <icon src="icon.png" />
+	<gap:splash src="splash.png" width="320" height="460" />
+	<gap:plugin name="org.apache.cordova.media" />
+</widget>
