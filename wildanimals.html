@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Pet Animals</title>
+<title>Wild Animals</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="apple-mobile-web-app-capable" content="YES" />
@@ -13,8 +13,8 @@
 
 <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.3.min.css" /> 
 <script src="js/jquery-1.11.1.min.js"></script> 
-<script src="js/jquery.mobile-1.4.3.min.js"></script>
-<script src="js/android.js"></script>  
+<script src="js/jquery.mobile-1.4.3.min.js"></script> 
+<script src="js/android.js"></script> 
 <link rel="stylesheet" href="themes/mandysanimals.min.css" />
 <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 </head>
@@ -23,21 +23,21 @@
 <!--Start Home Page-->
 <div data-role="page" id="pageone">
     <!--Define HTML5 Audio Sources-->
-    <audio id="birds" preload="auto">
-       <source src="Birds.ogg" type="audio/ogg">
-       <source src="Birds.mp3" type="audio/mpeg">
+    <audio id="lion" preload="auto">
+       <source src="lion.ogg" type="audio/ogg">
+       <source src="lion.mp3" type="audio/mpeg">
     </audio>
-    <audio id="dog" preload="auto">
-       <source src="Dog.ogg" type="audio/ogg">
-       <source src="Dog.mp3" type="audio/mpeg">
+    <audio id="owl" preload="auto">
+       <source src="owl.ogg" type="audio/ogg">
+       <source src="owl.mp3" type="audio/mpeg">
     </audio>
-    <audio id="cat" preload="auto">
-       <source src="Cat.ogg" type="audio/ogg">
-       <source src="Cat.mp3" type="audio/mpeg">
+    <audio id="elephant" preload="auto">
+       <source src="elephant.ogg" type="audio/ogg">
+       <source src="elephant.mp3" type="audio/mpeg">
     </audio>
-    <audio id="chicken"  preload="auto">
-       <source src="Chickens.ogg" type="audio/ogg">
-       <source src="Chickens.mp3" type="audio/mpeg">
+    <audio id="sealion"  preload="auto">
+       <source src="sealion.ogg" type="audio/ogg">
+       <source src="sealion.mp3" type="audio/mpeg">
     </audio>
   
   <div data-role="header" data-theme="b"><a href="#" data-role="button" data-icon="back" onclick="document.location.href='index.html';">&nbsp;</a>
@@ -45,12 +45,12 @@
   </div>
 
   <div data-role="content" class="ui-content">
-    <p style="text-align:center;">Pet Animals</p>
+    <p style="text-align:center;">Wild Animals</p>
     <div style="text-align:center;">
-        <a href="#" onclick="playAudio('birds')"><img src="images/Birds.jpg" width="128" height="128" alt="Birds" id="animal1"/></a>
-        <a href="#" onclick="playAudio('dog')"><img src="images/Dog.jpg" width="128" height="128" alt="Dog"  id="animal2" /></a>
-		<a href="#" onclick="playAudio('cat')"><img src="images/Cat.jpg" width="128" height="128" alt="Cat"  id="animal3"/></a>
-	    <a href="#" onclick="playAudio('chicken')"><img src="images/Chickens.jpg" width="128" height="128" alt="Chickens"  id="animal4"/></a>
+        <a href="#" onclick="playAudio('lion')"><img src="images/lion.jpg" width="128" height="128" alt="Lion" id="animal1"/></a>
+        <a href="#" onclick="playAudio('owl')"><img src="images/owl.jpg" width="128" height="128" alt="Owl"  id="animal2" /></a>
+		<a href="#" onclick="playAudio('elephant')"><img src="images/elephant.jpg" width="128" height="128" alt="Elephant"  id="animal3"/>
+	    <a href="#" onclick="playAudio('sealion')"><img src="images/sealion.jpg" width="128" height="128" alt="Sea Lion"  id="animal4"/></a>
     </div>
 
   </div>
@@ -69,22 +69,22 @@
    
    $('#animal1').click(function() 
    {
-	   noise = $('#birds');
+	   noise = $('#lion');
 	   noise.get(0).play();
    });
    $('#animal2').click(function() 
    {
-	   noise = $('#dog');
+	   noise = $('#owl');
 	   noise.get(0).play();
    });
    $('#animal3').click(function() 
    {
-	   noise = $('#cat');
+	   noise = $('#elephant');
 	   noise.get(0).play();
    });
    $('#animal4').click(function() 
    {
-	   noise = $('#chicken');
+	   noise = $('#sealion');
 	   noise.get(0).play();
    });
    
