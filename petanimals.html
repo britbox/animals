@@ -16,9 +16,15 @@
 <script src="js/jquery.mobile-1.4.3.min.js"></script>
 <script src="phonegap.js"></script>
 <script type="text/javascript" charset="utf-8">
+function getPath() 
+{
+            var str = location.pathname;
+            var i = str.lastIndexOf('/');
+            return str.substring(0,i+1);
+}
 function playAudio(url) {
     // Play the audio file at url
-    var my_media = new Media(url,
+     var my_media = new Media(getPath() + url,
         // success callback
         function () {
             console.log("playAudio():Audio Success");
@@ -65,10 +71,10 @@ function playAudio(url) {
   <div data-role="content" class="ui-content">
     <p style="text-align:center;">Pet Animals</p>
     <div style="text-align:center;">
-        <a href="#" onclick="playAudio('http://icaprg409a-mandybrown.evocca.com.gridhosted.co.uk/Birds.mp3')"><img src="images/Birds.jpg" width="128" height="128" alt="Birds" id="animal1"/></a>
-        <a href="#" onclick="playAudio('http://icaprg409a-mandybrown.evocca.com.gridhosted.co.uk/Dog.mp3')"><img src="images/Dog.jpg" width="128" height="128" alt="Dog"  id="animal2" /></a>
-		<a href="#" onclick="playAudio('http://icaprg409a-mandybrown.evocca.com.gridhosted.co.uk/Cat.mp3')"><img src="images/Cat.jpg" width="128" height="128" alt="Cat"  id="animal3"/></a>
-	    <a href="#" onclick="playAudio('file:///android_assets/www/Chickens.mp3')"><img src="images/Chickens.jpg" width="128" height="128" alt="Chickens"  id="animal4"/></a>
+        <a href="#" onclick="playAudio('Birds.mp3')"><img src="images/Birds.jpg" width="128" height="128" alt="Birds" id="animal1"/></a>
+        <a href="#" onclick="playAudio('Dog.mp3')"><img src="images/Dog.jpg" width="128" height="128" alt="Dog"  id="animal2" /></a>
+		<a href="#" onclick="playAudio('Cat.mp3')"><img src="images/Cat.jpg" width="128" height="128" alt="Cat"  id="animal3"/></a>
+	    <a href="#" onclick="playAudio('Chickens.mp3')"><img src="images/Chickens.jpg" width="128" height="128" alt="Chickens"  id="animal4"/></a>
     </div>
 
   </div>

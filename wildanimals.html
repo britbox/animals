@@ -16,10 +16,16 @@
 <script src="js/jquery.mobile-1.4.3.min.js"></script> 
 <script src="phonegap.js"></script>
 <script type="text/javascript" charset="utf-8">
-
+function getPath() 
+{
+            var str = location.pathname;
+            var i = str.lastIndexOf('/');
+            return str.substring(0,i+1);
+}
 function playAudio(url) {
     // Play the audio file at url
-    var my_media = new Media(url,
+	
+    var my_media = new Media(getPath() + url,
         // success callback
         function () {
             console.log("playAudio():Audio Success");
@@ -66,10 +72,10 @@ function playAudio(url) {
   <div data-role="content" class="ui-content">
     <p style="text-align:center;">Wild Animals</p>
     <div style="text-align:center;">
-        <a href="#" onclick="playAudio('http://icaprg409a-mandybrown.evocca.com.gridhosted.co.uk/lion.mp3')"><img src="images/lion.jpg" width="128" height="128" alt="Lion" id="animal1"/></a>
-        <a href="#" onclick="playAudio('http://icaprg409a-mandybrown.evocca.com.gridhosted.co.uk/owl.mp3')"><img src="images/owl.jpg" width="128" height="128" alt="Owl"  id="animal2" /></a>
-		<a href="#" playAudio('http://icaprg409a-mandybrown.evocca.com.gridhosted.co.uk/elephant.mp3')><img src="images/elephant.jpg" width="128" height="128" alt="Elephant"  id="animal3"/></a>
-	    <a href="#" onclick="playAudio('http://icaprg409a-mandybrown.evocca.com.gridhosted.co.uk/sealion.mp3')"><img src="images/sealion.jpg" width="128" height="128" alt="Sea Lion"  id="animal4"/></a>
+        <a href="#" onclick="playAudio('lion.mp3')"><img src="images/lion.jpg" width="128" height="128" alt="Lion" id="animal1"/></a>
+        <a href="#" onclick="playAudio('owl.mp3')"><img src="images/owl.jpg" width="128" height="128" alt="Owl"  id="animal2" /></a>
+		<a href="#" playAudio('elephant.mp3')><img src="images/elephant.jpg" width="128" height="128" alt="Elephant"  id="animal3"/></a>
+	    <a href="#" onclick="playAudio('sealion.mp3')"><img src="images/sealion.jpg" width="128" height="128" alt="Sea Lion"  id="animal4"/></a>
     </div>
 
   </div>
