@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<All>         
+        <task>
+              <question>What is the biggest cat in the world?</question>
+              <option>Lion</option>
+              <option>Tiger</option>
+              <option>Jaguar</option>
+			  <answer>Tiger</answer>
+        </task>         
+        <task>
+              <question>Where do Kangaroos live?</question>
+              <option>England</option>
+              <option>China</option>
+              <option>Australia</option>
+			  <answer>Australia</answer>
+        </task>         
+        <task>
+              <question>What are baby dogs called?</question>
+              <option>Puppies</option>
+              <option>Kittens</option>
+              <option>Fish</option>
+			  <answer>Puppies</answer>
+        </task> 
+		<task>
+              <question>What animal lives in water?</question>
+              <option>Monkey</option>
+              <option>Shark</option>
+              <option>Ostrich</option>
+			  <answer>Shark</answer>
+        </task>
+		<task>
+              <question>What are Daddy cows called?</question>
+              <option>Stags</option>
+              <option>Bees</option>
+              <option>Bulls</option>
+			  <answer>Bulls</answer>
+        </task>          
+</All>
