@@ -14,7 +14,25 @@
 <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.3.min.css" /> 
 <script src="js/jquery-1.11.1.min.js"></script> 
 <script src="js/jquery.mobile-1.4.3.min.js"></script>
-<script src="js/android.js"></script>  
+<script src="phonegap.js"></script>
+<script type="text/javascript" charset="utf-8">
+function playAudio(url) {
+    // Play the audio file at url
+    var my_media = new Media(url,
+        // success callback
+        function () {
+            console.log("playAudio():Audio Success");
+        },
+        // error callback
+        function (err) {
+            console.log("playAudio():Audio Error: " + err);
+        }
+    );
+    // Play audio
+    my_media.play();
+}
+ 
+</script>
 <link rel="stylesheet" href="themes/mandysanimals.min.css" />
 <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 </head>
@@ -50,7 +68,7 @@
         <a href="#" onclick="playAudio('http://icaprg409a-mandybrown.evocca.com.gridhosted.co.uk/Birds.mp3')"><img src="images/Birds.jpg" width="128" height="128" alt="Birds" id="animal1"/></a>
         <a href="#" onclick="playAudio('http://icaprg409a-mandybrown.evocca.com.gridhosted.co.uk/Dog.mp3')"><img src="images/Dog.jpg" width="128" height="128" alt="Dog"  id="animal2" /></a>
 		<a href="#" onclick="playAudio('http://icaprg409a-mandybrown.evocca.com.gridhosted.co.uk/Cat.mp3')"><img src="images/Cat.jpg" width="128" height="128" alt="Cat"  id="animal3"/></a>
-	    <a href="#" onclick="playAudio('http://icaprg409a-mandybrown.evocca.com.gridhosted.co.uk/Chickens.mp3')"><img src="images/Chickens.jpg" width="128" height="128" alt="Chickens"  id="animal4"/></a>
+	    <a href="#" onclick="playAudio('file:///android_assets/www/Chickens.mp3')"><img src="images/Chickens.jpg" width="128" height="128" alt="Chickens"  id="animal4"/></a>
     </div>
 
   </div>
@@ -65,29 +83,7 @@
    { 
       document.location('index.html');
    }
-   var noise;
-   
-   $('#animal1').click(function() 
-   {
-	   noise = $('#birds');
-	   noise.get(0).play();
-   });
-   $('#animal2').click(function() 
-   {
-	   noise = $('#dog');
-	   noise.get(0).play();
-   });
-   $('#animal3').click(function() 
-   {
-	   noise = $('#cat');
-	   noise.get(0).play();
-   });
-   $('#animal4').click(function() 
-   {
-	   noise = $('#chicken');
-	   noise.get(0).play();
-   });
-   
+
 </script> 
 </body>
 </html>
