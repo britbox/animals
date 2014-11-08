@@ -20,5 +20,5 @@
     <gap:platform name="winphone" />
     <icon src="icon.png" />
 	<gap:splash src="splash.png" width="320" height="460" />
-	<gap:plugin name="org.apache.cordova.media" />
+	<gap:plugin name="org.apache.cordova.media" version="0.2.13" />
 </widget>
