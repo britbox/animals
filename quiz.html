@@ -104,6 +104,12 @@ border-radius: 10px;
 a.proceed, a.proceed:hover, a.proceed:active, a.proceed:visited { text-decoration:none; color:white;}
 </style>
 <script type="text/javascript">
+function getPath() 
+{
+            var str = location.pathname;
+            var i = str.lastIndexOf('/');
+            return str.substring(0,i+1);
+}
 function showanswer(n)
 {
    document.getElementById('showanswer' + n).style.display='none';
@@ -121,6 +127,7 @@ else // code for IE5 and IE6
   {
   xhttp=new ActiveXObject("Microsoft.XMLHTTP");
   }
+  filename=getPath() + filename;
 xhttp.open("GET",filename,false);
 xhttp.send();
 return xhttp.responseXML;
